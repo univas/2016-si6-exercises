@@ -1,11 +1,6 @@
-var number;
+var number = parseFloat(process.argv[2]);
 
-console.log(factorial(number));
-
-function factorial(num) {
-    var fat=num;
-    for(var i===fat;i<1;i--){
-        fat=*i;
+    for(var i = number-1; i > 1; i--){
+        number = number * i;
     }
-    return fat;
-}
+   console.log("FATORIAL: " + number);
