@@ -1,13 +1,18 @@
 showResult();
 
 function showResult() {
-    var numero = getNumber();
-    console.log("Resultado: " + fatorial(numero));
+    var number = getNumber();
+    if(!isNaN(number)){
+        var result = factorial(number);
+        console.log(result);
+    }else{
+        console.log("Valor informado é invalido");
+    }
 }
 
-function fatorial(number) {
+function factorial(number) {
    if(number-1!=0){
-       result = number * fatorial(number-1);
+       result = number * factorial(number-1);
    }else{
        result = number;
    }

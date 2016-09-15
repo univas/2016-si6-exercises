@@ -1,32 +1,41 @@
 showResult();
 
 function showResult() {
-    var weight = getWeight();
-    var height = getHeight();
-    console.log(calculator(weight,height));
+    var a = getA();
+    var b = getB();
+    var bmi = calculator(a,b);
+    if(!isNaN(bmi))
+        console.log("BMI: " + bmi);
 }
 
-function calculator(weight, height) {
+function calculator(a, b) {
+    if(a>b){
+        weight = a;
+        height = b;
+    }else{
+        weight = b;
+        height = a;
+    }
     var bmi = weight / (height*height);
     return bmi;
 }
 
-function getWeight() {
+function getA() {
     var weight = process.argv[2];
     if(!isNaN(weight)){
         weight = parseFloat(weight);
     }else{
-        console.log("Not a number in weight field");
+        console.log("Not a number in field 1");
     }
     return weight;
 }
 
-function getHeight() {
+function getB() {
     var height = process.argv[3];
     if(!isNaN(height)){
         weight = parseFloat(height);
     }else{
-        console.log("Not a number in height field");
+        console.log("Not a number in field 2");
     }
     return height;
 }
