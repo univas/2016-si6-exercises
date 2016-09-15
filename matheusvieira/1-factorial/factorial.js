@@ -1,6 +1,6 @@
 (function showResult() {
     
-    var num = stringToNumber(getNumber());
+    var num = getNumber();
     
     if(isNumber(num)){
         console.log("Result: " + calc(num));
@@ -13,10 +13,6 @@
     
 function isNumber(value) {
     return !isNaN(value);
-}
-
-function stringToNumber(string) {
-    return parseFloat(string);
 }
 
 function getNumber() {
