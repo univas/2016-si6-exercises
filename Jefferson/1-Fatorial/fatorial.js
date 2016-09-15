@@ -1,4 +1,8 @@
-console.log("Resultado Fatorial: " + calcFatorial(process.argv[2]));
+console.log("Resultado Fatorial: " + calcFatorial(getNumber()));
+
+function getNumber() {
+    return process.argv.slice(2);
+}
 
 function calcFatorial(number) {
     var fatorial = 1;
