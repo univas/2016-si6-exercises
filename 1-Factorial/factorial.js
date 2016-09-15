@@ -1,8 +1,11 @@
-var a = process.argv[2];
+(function showResult(){
+    var a = getNumber();
+    console.log("The factorial of "+a+" is: "+ factorial(a));
+})();
 
-var f = factorial(a);
-
-console.log("The factorial of "+a+" is: "+ f);
+function getNumber(){
+    return process.argv[2]
+}
 
 function factorial(x){
     if(x == 1) {
