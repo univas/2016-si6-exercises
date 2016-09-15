@@ -1,20 +1,21 @@
 
 (function showResult(){
     var number = pegaNumero();
-    console.log("Fatorial"+  (number) );
+    console.log("Fatorial"+  (numberFat) );
 })
   ();
-// vai mostrar o resultado
+// vai mostrar o resultado da fatorial
 
 
 
 function calculaFatorial(){
 
 
-for (i = number; i< number; i--){
+for (i = numberFat; i< numberFat; i--){
     number = number*i;
 }
-} //vai calcular o fatorial
+} 
+//vai calcular o fatorial
 
 
 function pegaNumero(){
