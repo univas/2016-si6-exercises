@@ -2,7 +2,13 @@ showResult();
 
 function showResult() {
     var number = getNumber();
-    console.log("Celsius: " + convert(number));
+    if(!isNaN(number)){
+        var result = convert(number);
+        console.log("Celsius: " + result);
+    }else{
+        console.log("Valor informado é invalido");
+    }
+    
 }
 
 function convert(fahreiheit) {
@@ -12,10 +18,7 @@ function convert(fahreiheit) {
 
 function getNumber(){
     var number = getArguments();
-    if(!isNaN(number))
-        number = stringToNumber(number);
-    else
-        console.log("Not a valid number");
+    number = stringToNumber(number);
     return number;
 }
 

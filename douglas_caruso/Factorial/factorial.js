@@ -30,5 +30,5 @@ function stringToNumber(stringNumber) {
 }
 
 function getArguments(params) {
-    return process.argv.slice(2);
+    return process.argv[2];
 }

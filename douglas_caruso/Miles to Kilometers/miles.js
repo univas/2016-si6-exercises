@@ -2,7 +2,12 @@ showResult();
 
 function showResult() {
     var number = getNumber();
-    console.log("Kilometers: " + convert(number));
+    if(!isNaN(number)){
+        var result = convert(number);
+        console.log("Kilometers: " + result);
+    }else{
+        console.log("Valor informado é invalido");
+    }
 }
 
 function convert(miles) {
@@ -12,10 +17,7 @@ function convert(miles) {
 
 function getNumber(){
     var number = getArguments();
-    if(!isNaN(number))
-        number = stringToNumber(number);
-    else
-        console.log("Not a valid number");
+    number = stringToNumber(number);
     return number;
 }
 
