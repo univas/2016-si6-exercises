@@ -1,5 +1,5 @@
 function getNumber (){
-    var number = process.argv.slice(2);
+    var number = process.argv[2];
     showNumber(factorial(number));
 }
 
