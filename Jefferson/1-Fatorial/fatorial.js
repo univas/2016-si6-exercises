@@ -1,7 +1,7 @@
 console.log("Resultado Fatorial: " + calcFatorial(getNumber()));
 
 function getNumber() {
-    return process.argv.slice(2);
+    return process.argv[2];
 }
 
 function calcFatorial(number) {
