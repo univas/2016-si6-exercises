@@ -1,15 +1,16 @@
-var num = getNumber();
-    console.log("Result: " + calc(num));
+(function showResult() {
+    
+    var num = stringToNumber(getNumber());
+    
+    if(isNumber(num)){
+        console.log("Result: " + calc(num));
+    }else{
+        console.log("Please enter a number!");
+    }
 
+})();
 
-function getNumber() {
-    var number = getArgument()
-                 .filter(isNumber)
-                 .map(stringToNumber);
-    return number;
-}           
-
-
+    
 function isNumber(value) {
     return !isNaN(value);
 }
@@ -18,7 +19,7 @@ function stringToNumber(string) {
     return parseFloat(string);
 }
 
-function getArgument() {
+function getNumber() {
     return process.argv[2];
 }
 
