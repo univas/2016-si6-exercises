@@ -11,11 +11,10 @@
 function calculaFatorial(){
 
 
-for (i = 0; i < number; number--){
+for (i = number; i< number; i--){
     number = number*i;
 }
-
-}
+} //vai calcular o fatorial
 
 
 function pegaNumero(){
@@ -24,7 +23,7 @@ function pegaNumero(){
     .map(stringToNumero);
     return number;
 }
-
+//vai pegar o numero
 
 function stringToNumero(stringNumber){
     return parseFloat(stringNumber);
