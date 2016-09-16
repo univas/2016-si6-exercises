@@ -1,6 +1,12 @@
 var number = parseFloat(process.argv[2]);
 
-    for(var i = number-1; i > 1; i--){
-        number = number * i;
-    }
-   console.log("FATORIAL: " + number);
+function calcFactorial(num) { 
+           
+        for(var i = num-1; i > 1; i--){
+        num = num * i;
+    }  
+    console.log("FATORIAL:" + num);
+}
+
+//init
+calcFactorial(number);
