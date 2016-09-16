@@ -1,31 +1,31 @@
 (function showResult(){
-    var f = getFahreiheit();
+    var fahreiheit = getFahreiheit();
     
-    if(!f) {
+    if(!fahreiheit) {
         console.log("Please insert a NUMBER instead a char or string.");
         return;
     }
     
     console.log("The result of conversion is: " + 
-        convertToCelsius(f)
+        convertToCelsius(fahreiheit).toFixed(2)
     );    
 })();
 
-function convertToCelsius(f){
-    return ((f-32) / 1.8).toFixed(2);
+function convertToCelsius(fahreiheit){
+    return ((fahreiheit-32) / 1.8);
 }
 
 function getFahreiheit(){
-    var f = process.argv[2];
+    var fahreiheit = process.argv[2];
     
-    if(!validateInput(f)) return false;
+    if(!validateInput(fahreiheit)) return false;
     
     return f;
 }
 
 
-function validateInput(n){
-   if(isNaN(n)){
+function validateInput(number){
+   if(isNaN(number)){
        return false;
    }
    return true;

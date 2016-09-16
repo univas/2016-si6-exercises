@@ -1,31 +1,31 @@
 (function showResult(){
-    var a = getNumber();
+    var number = getNumber();
     
-    if(!a){
+    if(!number){
         console.log("Please, insert a NUMBER instead a char or string.");
         return;
     }
   
-    console.log("The factorial of "+a+" is: "+ factorial(a));
+    console.log("The factorial of "+number+" is: "+ factorial(number));
 })();
 
 function getNumber(){
-    var n = process.argv[2];
+    var number = process.argv[2];
     
-    if(!validateInput(n)) return false;
+    if(!validateInput(number)) return false;
     
-    return n;
+    return number;
 }
 
-function factorial(x){
-    if(x == 1) {
+function factorial(number){
+    if(number == 0) {
         return 1;
     }
-    return x * factorial(x-1);
+    return number * factorial(number-1);
 }
 
-function validateInput(n){
-   if(isNaN(n)){
+function validateInput(number){
+   if(isNaN(number)){
        return false;
    }
    return true;

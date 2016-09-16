@@ -1,37 +1,37 @@
 (function showResult(){
-    var h = getHeight();
-    var w = getWeight();
+    var height = getHeight();
+    var weight = getWeight();
     
-    if(!h || !w) {
+    if(!height || !weight) {
         console.log("One or more wrong values. Please, insert number intead char or string.");
         return;
     }
     
-    console.log("Your Body Mass Index is: " +calculateBMI(h, w));
+    console.log("Your Body Mass Index is: " +calculateBMI(height, weight).toFixed(2));
 })();
 
-function calculateBMI(h, w){
-    return (w / (h*h)).toFixed(2);
+function calculateBMI(height, weight){
+    return weight / (height*height);
 }
 
 function getHeight(){
-    var h = process.argv[2]; 
+    var height = process.argv[2]; 
     
-    if(!validateInput(h)) return false;
+    if(!validateInput(height)) return false;
     
-    return h;
+    return height;
 }
 
 function getWeight(){
-    var w = process.argv[3]
+    var weight = process.argv[3]
     
-    if(!validateInput(w)) return false;
+    if(!validateInput(weight)) return false;
     
-    return w;
+    return weight;
 }
 
-function validateInput(n){
-   if(isNaN(n)){
+function validateInput(number){
+   if(isNaN(number)){
        return false;
    }
    return true;

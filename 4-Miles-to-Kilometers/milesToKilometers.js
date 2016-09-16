@@ -1,30 +1,30 @@
 (function showResult(){
-    var m = getMiles();
+    var miles = getMiles();
     
-    if(!m) {
+    if(!miles) {
         console.log("Please insert a NUMBER instead a char or string.");
         return;
     }
     
     
-    console.log(m + " Miles is equals to " + 
-                    convertToKilometers(m).toFixed(2)
+    console.log(miles + " Miles is equals to " + 
+                    convertToKilometers(miles).toFixed(2)
                 + " kilometers.");    
 })();
 
-function convertToKilometers(m){
-    return m / 0.62137;
+function convertToKilometers(miles){
+    return miles / 0.62137;
 }
 
 function getMiles(){
-    var m = process.argv[2];
+    var miles = process.argv[2];
     
-    if(!validateInput(m)) return false;
-    return m;
+    if(!validateInput(miles)) return false;
+    return miles;
 }
 
-function validateInput(n){
-   if(isNaN(n)){
+function validateInput(number){
+   if(isNaN(number)){
        return false;
    }
    return true;
