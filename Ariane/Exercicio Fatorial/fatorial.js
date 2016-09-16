@@ -3,8 +3,11 @@
     var numberFat = pegaNumeroFat();
     console.log("Fatorial"+  (numberFat) );
 })
-  ();
 // vai mostrar o resultado da fatorial
+
+  ();   //<-- ESSE (); torna a função auto executavel , para que não precise posterioremente chama-la para ser executada 
+  
+
 
 
 function pegaNumero(){
@@ -24,7 +27,7 @@ function stringToNumero(stringNumberFat){
 
 
 function getArguments(){
-    return process.argv.slice(2);
+    return process.argv[2];
 }
 
 // vai pegar os argumentos do console
