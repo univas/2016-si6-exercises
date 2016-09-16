@@ -26,7 +26,7 @@ function getNumber(){
 }
 
 function stringToNumber(stringNumber) {
-    return parseFloat(stringNumber);
+    return parseInt(stringNumber);
 }
 
 function getArguments(params) {

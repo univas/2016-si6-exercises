@@ -4,6 +4,7 @@ function showResult() {
     var numA = getA();
     var numB = getB();
     var bmi = calculator(numA,numB);
+    bmi = parseFloat(bmi.toFixed(1));
     if(!isNaN(bmi))
         console.log("BMI: " + bmi);
 }

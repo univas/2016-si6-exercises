@@ -4,6 +4,7 @@ function showResult() {
     var number = getNumber();
     if(!isNaN(number)){
         var result = convert(number);
+        result = parseFloat(result.toFixed(3));
         console.log("Kilometers: " + result);
     }else{
         console.log("Valor informado é invalido");
