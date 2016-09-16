@@ -1,20 +1,20 @@
 showResult();
 
 function showResult() {
-    var a = getA();
-    var b = getB();
-    var bmi = calculator(a,b);
+    var numA = getA();
+    var numB = getB();
+    var bmi = calculator(numA,numB);
     if(!isNaN(bmi))
         console.log("BMI: " + bmi);
 }
 
-function calculator(a, b) {
-    if(a>b){
-        weight = a;
-        height = b;
+function calculator(numA, numB) {
+    if(numA>numB){
+        weight = numA;
+        height = numB;
     }else{
-        weight = b;
-        height = a;
+        weight = numB;
+        height = numA;
     }
     var bmi = weight / (height*height);
     return bmi;
