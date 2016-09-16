@@ -4,9 +4,7 @@ function isNumber(value) {
 }
 
 function getNumber(){
-    var number = process.argv[2];;
-    
-    //if(IsNumber(number))
+    var number = process.argv[2];
         return number;
 }
 function calcFatorial(value){
@@ -19,9 +17,12 @@ function calcFatorial(value){
 }
 
 
-
 (function showResult(){
-    console.log(calcFatorial(getNumber()));
+   var number = getNumber();
+    if(isNumber(number))
+        console.log(calcFatorial(number));
+    else
+        console.log("Please! Input Valid Type!")
 })();
 
   
