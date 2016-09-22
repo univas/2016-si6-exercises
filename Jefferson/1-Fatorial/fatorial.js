@@ -1,7 +1,11 @@
 console.log("Resultado Fatorial: " + calcFatorial(getNumber()));
 
 function getNumber() {
-    return process.argv[2];
+    return convertType(process.argv[2]);
+}
+
+function convertType(value) {
+    return parseFloat(value);
 }
 
 function calcFatorial(number) {
