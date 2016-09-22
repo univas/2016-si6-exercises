@@ -3,6 +3,14 @@ function obterDistanciaMilhas() {
 }
 
 function conversorDistancia(milhas) {
-    return milhas/0.62137;
+    if (isNumber(milhas)) {
+        return milhas / 0.62137;
+    }else{
+        return "Erro: infome um número válido!"
+    }
+}
+
+function isNumber(number) {
+    return !isNaN(parseFloat(number)) && isFinite(number);
 }
 console.log(conversorDistancia(obterDistanciaMilhas()));
