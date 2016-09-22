@@ -1,7 +1,17 @@
-console.log("Resultado Fatorial: " + calcFatorial(getNumber()));
+displayResult();
+
+function displayResult() {
+    if(isNaN(convertType(getNumber())) == false) {
+        var number = convertType(getNumber());
+        console.log("Resutado Fatorial: " + calcFatorial(number));
+    }
+    else {
+        console.log("O número digitado é inválido! Tente novamente.")
+    }
+}
 
 function getNumber() {
-    return convertType(process.argv[2]);
+    return process.argv[2];
 }
 
 function convertType(value) {
@@ -9,7 +19,7 @@ function convertType(value) {
 }
 
 function calcFatorial(number) {
-    var fatorial = 1;
+    fatorial = 1;
     for(var i = number; i>=1; i--) {
         fatorial = i * fatorial; 
     }
