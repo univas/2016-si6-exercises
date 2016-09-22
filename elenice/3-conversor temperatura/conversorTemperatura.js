@@ -1,5 +1,9 @@
-function conversorTemperatura(temperaturaFahrenheit) {
-    var temperaturaFahrenheit = parseFloat(process.argv[2]);
-    return (temperaturaFahrenheit - 32)/1.8;
+function obterTemperaturaFahrenheit() {
+    return parseFloat(process.argv[2]);
 }
-console.log(conversorTemperatura());
+
+function conversorTemperatura(temperaturaFahrenheit) {
+    return (temperaturaFahrenheit - 32) / 1.8;
+}
+
+console.log(conversorTemperatura(obterTemperaturaFahrenheit()));

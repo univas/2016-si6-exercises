@@ -1,12 +1,15 @@
-function factorial(a) {
-    var a = parseFloat(process.argv[2]);
+function obterNumero() {
+    return parseFloat(process.argv[2]);
+}
+
+function calcularFactorial(numero) {
     var i = 1;
     var fat = 1;
     
-    while( i <= a ){
+    while( i <= numero ){
         var fat = fat * i;
             i += 1;
     }
-   return "Factorial de " + a + ": " + fat;
+   return fat;
 }
-console.log(factorial());
+console.log(calcularFactorial(obterNumero()));

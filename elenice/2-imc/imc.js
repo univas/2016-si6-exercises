@@ -1,7 +1,13 @@
-function calcularIMC(peso,altura) {
-    var peso = parseFloat(process.argv[2]);
-    var altura = parseFloat(process.argv[3]);
-   
-   return peso/(altura*altura);
+function obterPeso() {
+    return process.argv[2];
 }
-console.log(calcularIMC());
+
+function obterAltura() {
+    return process.argv[3];
+}
+function calcularIMC(peso, altura) {
+    return peso / (altura * altura);
+}
+
+console.log(calcularIMC(obterPeso(), obterAltura()));
+
